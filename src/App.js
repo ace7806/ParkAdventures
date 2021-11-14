@@ -1,24 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/nav/NavBar';
+import Header from './components/header/Header';
+import SearchPage from './components/SearchComponent/SearchPage';
+import ParkInfoLayout from './components/parks/parkInfo/ParkInfoLayout'
+import Webcam from './components/parks/parkInfo/webcam/Webcam';
+import {BrowserRouter, Switch,Route,Link} from "react-router-dom";
+import Footer from './components/footer/Footer';
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+    <BrowserRouter>
+      
+      
+      
+           
+        <Switch>
+          
+          <Route path="/about" component={ParkInfoLayout} />
+          <Route path="/webcam" component={Webcam} />
+
+            
+          <Route path="/">
+            <NavBar />
+            <Header />
+            <SearchPage />
+          </Route>
+        </Switch>
+
+        
+      <Footer />
+      </BrowserRouter>
   );
 }
 
