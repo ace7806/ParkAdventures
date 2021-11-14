@@ -9,7 +9,7 @@ const Parks = (props) => {
     const {parks} = props
     const [parkInfo, setParkInfo] = useState([]);
     const [cards,setCards] = useState([]);
-    const bottomPage = ()=>{
+    const loadMoreParks = ()=>{
         setCards([...cards,...parkInfo.splice(10,10)])
         setParkInfo([...parkInfo])
         console.log(parkInfo.length);
@@ -17,14 +17,14 @@ const Parks = (props) => {
     }
 
 
-    const dude = async()=>{
+    const setUp = async()=>{
         const result = await getParks(parks)        
         console.log(result.length);
         setCards([...result.slice(0,10)])
         setParkInfo(result)        
        }
     useEffect(() => {
-        dude()
+        setUp()
         
       }, [parks]);
     return (
@@ -33,7 +33,7 @@ const Parks = (props) => {
                 {cards.map(v=>{
                     return  (<Grid item xs={6}> <ParkCard park={v}/> </Grid>)
                 })}
-                           {parkInfo.length> 10&&<Button sx={{width:1}} onClick={bottomPage} variant="text">LOAD MORE PARKS</Button>}
+                           {parkInfo.length> 10&&<Button sx={{width:1}} onClick={loadMoreParks} variant="text">LOAD MORE PARKS</Button>}
 
             </Grid>
         
