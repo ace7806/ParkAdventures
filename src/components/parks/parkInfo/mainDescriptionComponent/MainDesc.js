@@ -7,7 +7,7 @@ const MainDesc = (props) => {
     const {contacts,fullName,description}=props.park
     console.log(props);
     return (
-        <Paper sx={{height:350,overflow:"auto",backgroundColor:"bisque"}}>
+        <Paper sx={{height:350,overflow:"auto",backgroundColor:"bisque",opacity:0.9}}>
             <Typography sx={{p:1,fontWeight:600}} variant="h4">{fullName}</Typography>
             <Typography sx={{p:1,fontWeight:600}} variant="body1">{description}</Typography>
             <Typography sx={{p:1,fontWeight:700}} variant="subtitle2">Phone Number: {contacts.phoneNumbers[0].phoneNumber}</Typography>
