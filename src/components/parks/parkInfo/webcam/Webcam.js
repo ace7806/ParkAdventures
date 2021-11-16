@@ -5,7 +5,8 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { getParkWebcam } from '../../../../services/nationalServiceAPI';
 import { useState,useEffect } from 'react';
-
+//Since not all national parks have webcams, and some dont even let you get their images i decided that if 
+//i couldnt render any webcam images i'll render the normal park images
 const Webcam = (props) => {
     const {images,parkCode} = props.location.state
     const [webcams, setWebcams] = useState([]);

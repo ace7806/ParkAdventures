@@ -4,13 +4,17 @@ import ParkCard from '../parkCard/ParkCard'
 import { Grid,Button } from '@mui/material'
 import { getParks } from '../../services/nationalServiceAPI'
 
+//we store all the parks at parkInfo but since we want infinite scrolling and
+// rendering all of them at the start is extremely slow
+//we use the cards array to actively remove the first 10 elements of 
+//the parkInfo array and add it to the grid every time we load more parks
 
 const Parks = (props) => {
-    const {parks} = props
+    const {parks,selectedState} = props
     const [parkInfo, setParkInfo] = useState([]);
     const [cards,setCards] = useState([]);
     const loadMoreParks = ()=>{
-        setCards([...cards,...parkInfo.splice(10,10)])
+        setCards([...cards,...parkInfo.splice(0,10)])
         setParkInfo([...parkInfo])
         console.log(parkInfo.length);
         
@@ -18,10 +22,11 @@ const Parks = (props) => {
 
 
     const setUp = async()=>{
-        const result = await getParks(parks)        
+        console.log(selectedState);
+        const result = await getParks(parks,selectedState)        
         console.log(result.length);
-        setCards([...result.slice(0,10)])
-        setParkInfo(result)        
+        setCards([...result.splice(0,10)]) //grab the first ten elements and render those cards
+        setParkInfo(result)
        }
     useEffect(() => {
         setUp()
