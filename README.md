@@ -28,7 +28,7 @@
 
 [![Park Adventures][product-screenshot]](https://imgur.com/a/QfLY91V)
 
-Have you ever wanted to go on a trip to a park but wasnt really sure what to do or where to go? I often find myself struggling to find interesting activities to do on weekends with my friends and family. The Park Adventures web app makes it easy to look up any park with any activity you want. With a nice and intuitive User interface anyone can navigate through it and have the parks description and Information displayed quicly with no hassles.
+Have you ever wanted to go on a trip to a park but weren't sure what to do or where to go? I often find myself struggling to find exciting activities to do on weekends with my friends and family. The Park Adventures web app makes it easy to look up any park with any activity you want. With a friendly and intuitive User interface, anyone can navigate through it and have the park's description, and Information displayed quickly with no hassles.
 
 This demo web app was made to complete Capital One's software engineering Summit Code Challenge and more will be added later
 
