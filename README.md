@@ -1,11 +1,4 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
 
 
@@ -31,6 +24,8 @@
 Have you ever wanted to go on a trip to a park but weren't sure what to do or where to go? I often find myself struggling to find exciting activities to do on weekends with my friends and family. The Park Adventures web app makes it easy to look up any park with any activity you want. With a friendly and intuitive User interface, anyone can navigate through it and have the park's description, and Information displayed quickly with no hassles.
 
 This demo web app was made to complete Capital One's software engineering Summit Code Challenge and more will be added later
+
+check it the owrking demo right here: https://ace7806.github.io/ParkAdventures/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
