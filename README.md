@@ -25,7 +25,7 @@ Have you ever wanted to go on a trip to a park but weren't sure what to do or wh
 
 This demo web app was made to complete Capital One's software engineering Summit Code Challenge and more will be added later
 
-check it the owrking demo right here: https://ace7806.github.io/ParkAdventures/
+check it the working demo right here: https://ace7806.github.io/ParkAdventures/
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
